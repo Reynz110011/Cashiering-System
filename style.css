@@ -1,0 +1,164 @@
+* { box-sizing: border-box; }
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #fdf6ec;
+  color: #2e2620;
+  margin: 0;
+  padding: 20px;
+}
+h1 {
+  text-align: center;
+  color: #a4472c;
+  margin-bottom: 5px;
+}
+.subtitle {
+  text-align: center;
+  color: #6b5b4b;
+  margin-top: 0;
+  margin-bottom: 20px;
+}
+.container {
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+.panel {
+  background-color: #ffffff;
+  border: 2px solid #e0d3bd;
+  border-radius: 8px;
+  padding: 15px;
+}
+#catalogPanel {
+  flex: 2;
+  min-width: 320px;
+}
+#transactionPanel {
+  flex: 1;
+  min-width: 280px;
+}
+h2 {
+  color: #a4472c;
+  border-bottom: 2px solid #e0d3bd;
+  padding-bottom: 5px;
+}
+table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+th, td {
+  text-align: left;
+  padding: 6px 4px;
+  border-bottom: 1px solid #eee0cc;
+}
+th {
+  background-color: #f2e6d0;
+}
+#productTableWrapper {
+  max-height: 400px;
+  overflow-y: auto;
+}
+button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+  padding: 6px 10px;
+  font-size: 13px;
+}
+.addBtn {
+  background-color: #a4472c;
+  color: white;
+}
+.addBtn:hover {
+  background-color: #83371f;
+}
+.removeBtn {
+  background-color: #c0392b;
+  color: white;
+}
+.qtyInput {
+  width: 50px;
+}
+#transactionList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  max-height: 250px;
+  overflow-y: auto;
+}
+#transactionList li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 6px 0;
+  border-bottom: 1px dashed #e0d3bd;
+  font-size: 14px;
+}
+#transactionTotal {
+  text-align: right;
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+  color: #a4472c;
+}
+.checkoutForm {
+  margin-top: 15px;
+  border-top: 2px solid #e0d3bd;
+  padding-top: 10px;
+}
+.checkoutForm label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+.checkoutForm input {
+  width: 100%;
+  padding: 6px;
+  margin-bottom: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+#checkoutBtn {
+  background-color: #2e7d32;
+  color: white;
+  width: 100%;
+  padding: 10px;
+  font-size: 15px;
+}
+#checkoutBtn:hover {
+  background-color: #1f5a24;
+}
+#receipt {
+  margin-top: 15px;
+  background-color: #fffbe8;
+  border: 1px dashed #c9a86a;
+  padding: 10px;
+  font-size: 13px;
+  white-space: pre-wrap;
+  display: none;
+}
+#reportPanel {
+  margin-top: 20px;
+}
+.reportButtons button {
+  background-color: #6b5b4b;
+  color: white;
+  margin-right: 10px;
+  margin-bottom: 10px;
+}
+.reportButtons button:hover {
+  background-color: #4d4033;
+}
+#reportOutput {
+  background-color: #ffffff;
+  border: 2px solid #e0d3bd;
+  border-radius: 8px;
+  padding: 15px;
+  font-size: 14px;
+  white-space: pre-wrap;
+}
+.errorMsg {
+  color: #c0392b;
+  font-weight: bold;
+  margin-top: 5px;
+}

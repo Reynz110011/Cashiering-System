@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Sari-Sari Store POS (Modules)</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<h1>Colita Store Cashiering System</h1>
+<p class="subtitle">Point of Sale System </p>
+
+<div class="container">
+
+  <!-- LEFT SIDE: PRODUCT CATALOG -->
+  <div class="panel" id="catalogPanel">
+    <h2>Product Catalog</h2>
+    <div id="productTableWrapper">
+      <table>
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Product</th>
+            <th>Price</th>
+            <th>Qty</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody id="productTableBody">
+          <!-- filled in by render.js -->
+        </tbody>
+      </table>
+    </div>
+  </div>
+
+  <!-- RIGHT SIDE: CURRENT TRANSACTION / TRANSACTION -->
+  <div class="panel" id="transactionPanel">
+    <h2>Current Transaction</h2>
+    <ul id="transactionList">
+      <li>No items yet.</li>
+    </ul>
+    <div id="transactionTotal">Total: PHP 0.00</div>
+
+    <div class="checkoutForm">
+      <label for="paymentInput">Amount Paid (PHP)</label>
+      <input type="number" id="paymentInput" placeholder="Enter cash received">
+      <div id="checkoutError" class="errorMsg"></div>
+      <button id="checkoutBtn">Checkout</button>
+    </div>
+
+    <div id="receipt"></div>
+  </div>
+
+</div>
+
+<!-- REPORTING SECTION -->
+<div class="panel" id="reportPanel">
+  <h2>Reports</h2>
+  <div class="reportButtons">
+    <button id="viewAllBtn">View All Transactions</button>
+    <button id="totalSalesBtn">Show Total Sales</button>
+    <button id="bestSellerBtn">Most Purchased Product</button>
+  </div>
+  <div id="reportOutput">Reports will appear here.</div>
+</div>
+
+<!-- type="module" is what lets main.js use import/export -->
+<script type="module" src="js/main.js"></script>
+
+</body>
+</html>
